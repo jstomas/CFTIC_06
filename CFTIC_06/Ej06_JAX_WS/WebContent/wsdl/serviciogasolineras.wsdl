@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ServicioGasolinerasService" targetNamespace="http://servicio.curso.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://servicio.curso.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://servicio.curso.com/" schemaLocation="serviciogasolineras_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getHistoricoGasolinera">
+    <wsdl:part name="parameters" element="tns:getHistoricoGasolinera">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGasolineraMasBarata">
+    <wsdl:part name="parameters" element="tns:getGasolineraMasBarata">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarPorciudad">
+    <wsdl:part name="parameters" element="tns:listarPorciudad">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarPorciudadResponse">
+    <wsdl:part name="parameters" element="tns:listarPorciudadResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHistoricoGasolineraResponse">
+    <wsdl:part name="parameters" element="tns:getHistoricoGasolineraResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrecioCombustibleFechaResponse">
+    <wsdl:part name="parameters" element="tns:getPrecioCombustibleFechaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrecioCombustibleActual">
+    <wsdl:part name="parameters" element="tns:getPrecioCombustibleActual">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrecioCombustibleActualResponse">
+    <wsdl:part name="parameters" element="tns:getPrecioCombustibleActualResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPrecioCombustibleFecha">
+    <wsdl:part name="parameters" element="tns:getPrecioCombustibleFecha">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGasolineraMasBarataResponse">
+    <wsdl:part name="parameters" element="tns:getGasolineraMasBarataResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ServicioGasolineras">
+    <wsdl:operation name="getHistoricoGasolinera">
+      <wsdl:input name="getHistoricoGasolinera" message="tns:getHistoricoGasolinera">
+    </wsdl:input>
+      <wsdl:output name="getHistoricoGasolineraResponse" message="tns:getHistoricoGasolineraResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGasolineraMasBarata">
+      <wsdl:input name="getGasolineraMasBarata" message="tns:getGasolineraMasBarata">
+    </wsdl:input>
+      <wsdl:output name="getGasolineraMasBarataResponse" message="tns:getGasolineraMasBarataResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrecioCombustibleActual">
+      <wsdl:input name="getPrecioCombustibleActual" message="tns:getPrecioCombustibleActual">
+    </wsdl:input>
+      <wsdl:output name="getPrecioCombustibleActualResponse" message="tns:getPrecioCombustibleActualResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarPorciudad">
+      <wsdl:input name="listarPorciudad" message="tns:listarPorciudad">
+    </wsdl:input>
+      <wsdl:output name="listarPorciudadResponse" message="tns:listarPorciudadResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrecioCombustibleFecha">
+      <wsdl:input name="getPrecioCombustibleFecha" message="tns:getPrecioCombustibleFecha">
+    </wsdl:input>
+      <wsdl:output name="getPrecioCombustibleFechaResponse" message="tns:getPrecioCombustibleFechaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioGasolinerasServiceSoapBinding" type="tns:ServicioGasolineras">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getHistoricoGasolinera">
+      <soap:operation soapAction="urn:GetHistoricoGasolinera" style="document"/>
+      <wsdl:input name="getHistoricoGasolinera">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getHistoricoGasolineraResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGasolineraMasBarata">
+      <soap:operation soapAction="urn:GetGasolineraMasBarata" style="document"/>
+      <wsdl:input name="getGasolineraMasBarata">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getGasolineraMasBarataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrecioCombustibleActual">
+      <soap:operation soapAction="urn:GetPrecioCombustibleActual" style="document"/>
+      <wsdl:input name="getPrecioCombustibleActual">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPrecioCombustibleActualResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarPorciudad">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarPorciudad">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarPorciudadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrecioCombustibleFecha">
+      <soap:operation soapAction="urn:GetPrecioCombustibleFecha" style="document"/>
+      <wsdl:input name="getPrecioCombustibleFecha">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPrecioCombustibleFechaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioGasolinerasService">
+    <wsdl:port name="ServicioGasolinerasPort" binding="tns:ServicioGasolinerasServiceSoapBinding">
+      <soap:address location="http://localhost:9090/ServicioGasolinerasPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
